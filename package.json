@@ -1,0 +1,10 @@
+{
+  "name": "rodrigosouzafilho-adv-br",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional de Rodrigo Souza Filho — Advocacia (Direito Civil, Curitiba). Estático: HTML, CSS e JavaScript puros, gerados a partir de modelos/ + config.js.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node aplicar-config.js"
+  }
+}
