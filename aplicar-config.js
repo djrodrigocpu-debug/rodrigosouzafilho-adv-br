@@ -100,6 +100,16 @@ function decodeEntidades(s) {
 
 function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 
+/* Versão curta do conteúdo de um arquivo — vira "?v=..." nos links de
+   estilo.css e app.js. Quando o arquivo muda, a URL muda junto e o
+   navegador de quem já visitou o site busca a versão nova na hora,
+   mesmo com o cache de 7 dias configurado no vercel.json. */
+function versaoDe(arquivo) {
+  return crypto.createHash("sha256")
+    .update(fs.readFileSync(path.join(__dirname, arquivo)))
+    .digest("hex").slice(0, 8);
+}
+
 /* motor de tokens: condicionais com fechamento nomeado + substituições */
 function resolver(txt, cfg) {
   const limpaUrl = function (u) { return (u || "").trim().replace(/\/+$/, ""); };
@@ -265,12 +275,19 @@ function principal() {
 
   copiarParaPublico();
 
+  /* versões de cache dos arquivos que o navegador guarda por 7 dias */
+  const vCss = versaoDe("assets/estilo.css");
+  const vJs = versaoDe("assets/app.js");
+  console.log("  ok  versões de cache: estilo.css?v=" + vCss + " · app.js?v=" + vJs);
+
   console.log("");
   let tudoOk = true;
   PAGINAS.forEach(function (nome) {
     const modelo = path.join(MODELOS, nome);
     if (!fs.existsSync(modelo)) { console.error("  FALTA modelo: " + nome); tudoOk = false; return; }
-    const html = resolver(fs.readFileSync(modelo, "utf8"), cfg);
+    const html = resolver(fs.readFileSync(modelo, "utf8"), cfg)
+      .split('assets/estilo.css"').join('assets/estilo.css?v=' + vCss + '"')
+      .split('assets/app.js"').join('assets/app.js?v=' + vJs + '"');
     if (!conferirSobras(nome, html)) tudoOk = false;
     if (!conferirProibidas(nome, html)) tudoOk = false;
     fs.writeFileSync(path.join(__dirname, nome), html, "utf8");      /* raiz: conferência local  */
