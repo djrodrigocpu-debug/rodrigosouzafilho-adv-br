@@ -91,11 +91,12 @@ build do Vercel e no console do navegador (F12).
 
 ## Fotografia profissional
 
-O espaço da foto na seção "Sobre" exibe, por enquanto, uma ficha
-institucional elegante — nenhum "espaço reservado" aparece ao visitante.
-Quando houver fotografia, siga as instruções comentadas dentro de
-`modelos/index.html` (bloco "FOTOGRAFIA PROFISSIONAL"): salvar o arquivo em
-`assets/images/` e trocar o bloco da ficha pela tag de imagem indicada.
+A fotografia oficial já está integrada na seção "Sobre", em um retrato
+emoldurado com legenda na identidade do site. Os arquivos ficam em
+`assets/images/` em quatro larguras (360/540/720/816 px, proporção 4:5) e
+dois formatos (WebP, com reserva em JPEG). Para trocar a foto no futuro,
+gere novas versões nos mesmos tamanhos e com os mesmos nomes — nenhum outro
+arquivo precisa mudar (instruções também comentadas em `modelos/index.html`).
 
 ## Decisões técnicas
 

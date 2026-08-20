@@ -310,27 +310,37 @@
   <div class="container sobre-grid">
     <div class="reveal">
       <!-- ==========================================================
-        FOTOGRAFIA PROFISSIONAL — enquanto não há foto, este espaço
-        exibe a ficha institucional (nenhuma mensagem de "espaço
-        reservado" aparece ao visitante). Para usar a fotografia
-        real, troque o bloco <div class="ficha">…</div> inteiro por:
-
-        <img class="foto-sobre" src="assets/images/rodrigo-souza-filho.webp"
-             width="720" height="900" alt="Rodrigo Souza Filho, advogado">
-
-        Sugestão de arquivo: 720x900 px, formato .webp, até 120 KB,
-        luz suave, fundo neutro, enquadramento do peito para cima.
-        Coloque o arquivo em assets/images/ e faça a troca aqui em
-        modelos/index.html (o build aplica nas páginas publicadas).
+        FOTOGRAFIA PROFISSIONAL — retrato emoldurado no mesmo
+        cartão da identidade do site, com legenda em filete duplo.
+        Para TROCAR a foto no futuro: gere novas versões nos mesmos
+        tamanhos (360/540/720/816 px de largura, proporção 4:5, em
+        .webp e .jpg) com os mesmos nomes em assets/images/ — nada
+        mais precisa mudar. A ficha institucional usada antes da
+        fotografia continua disponível no histórico do repositório.
       ========================================================== -->
-      <div class="ficha">
-        <div class="ficha-mono" aria-hidden="true">RSF</div>
-        <p class="ficha-nome">Rodrigo Souza Filho</p>
-        <div class="ficha-fio" aria-hidden="true"></div>
-        <!--SE:oab--><p class="ficha-linha">Advogado · __OAB__</p><!--/SE:oab--><!--SENAO:oab--><p class="ficha-linha">Advogado</p><!--/SENAO:oab-->
-        <!--SE:cidade--><p class="ficha-linha">__CIDADE__ — __ESTADO__</p><!--/SE:cidade-->
-        <p class="ficha-area">Advocacia Civil</p>
-      </div>
+      <figure class="foto-quadro">
+        <picture>
+          <source type="image/webp"
+                  srcset="assets/images/rodrigo-souza-filho-360.webp 360w,
+                          assets/images/rodrigo-souza-filho-540.webp 540w,
+                          assets/images/rodrigo-souza-filho-720.webp 720w,
+                          assets/images/rodrigo-souza-filho-816.webp 816w"
+                  sizes="(max-width: 900px) min(calc(100vw - 64px), 396px), 342px">
+          <img src="assets/images/rodrigo-souza-filho-720.jpg"
+               srcset="assets/images/rodrigo-souza-filho-360.jpg 360w,
+                       assets/images/rodrigo-souza-filho-540.jpg 540w,
+                       assets/images/rodrigo-souza-filho-720.jpg 720w,
+                       assets/images/rodrigo-souza-filho-816.jpg 816w"
+               sizes="(max-width: 900px) min(calc(100vw - 64px), 396px), 342px"
+               width="816" height="1020" loading="lazy" decoding="async"
+               alt="Rodrigo Souza Filho, advogado, em seu escritório">
+        </picture>
+        <figcaption class="foto-legenda">
+          <span class="foto-fio" aria-hidden="true"></span>
+          <!--SE:oab--><span class="foto-linha">Advogado · __OAB__</span><!--/SE:oab--><!--SENAO:oab--><span class="foto-linha">Advogado</span><!--/SENAO:oab-->
+          <span class="foto-linha foto-linha-area">Advocacia Civil<!--SE:cidade--> · __CIDADE__<!--/SE:cidade--></span>
+        </figcaption>
+      </figure>
     </div>
     <div class="sobre-texto">
       <p class="eyebrow eyebrow--right reveal">Sobre o advogado</p>

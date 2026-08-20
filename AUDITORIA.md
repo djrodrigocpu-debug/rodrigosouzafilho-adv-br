@@ -98,8 +98,10 @@ preenchido), além de conferência manual de conteúdo, ética e design.
 | `oab` | **já preenchida — confirmar o número** antes da primeira publicação |
 | `endereco`, `linkedin`, `instagram` (opcionais) | linhas adicionais no rodapé e endereço nos dados estruturados |
 
-Fotografia profissional (opcional): instruções comentadas em
-`modelos/index.html`, bloco "FOTOGRAFIA PROFISSIONAL".
+Fotografia profissional: **integrada** — retrato emoldurado na seção
+Sobre, quatro larguras (360–816 px) em WebP com reserva em JPEG,
+`srcset`/`sizes`/`width`/`height` definidos e carregamento adiado
+(`loading="lazy"`): fora do caminho crítico, sem efeito no LCP.
 
 ## D. Verificações automatizadas executadas
 
