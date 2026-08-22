@@ -59,3 +59,5 @@ Verifica: 205/2021 OK? LGPD? Nome proibido? JSON-LD? CSP?
 ## Como trabalhar
 
 Português. Passe 205/2021 antes. Markdown único colável.
+
+**Cache-busting e automatico**: o build (aplicar-config.js) injeta ?v=<hash> nos links de estilo.css e app.js ao gerar public/. Nunca fixar ?v= manualmente nos modelos - o link deve ficar assets/estilo.css limpo.
