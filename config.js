@@ -32,7 +32,7 @@ window.CONFIG = {
      Necessário para canonical, og:url, sitemap.xml e para o
      redirecionamento do formulário para /obrigado.
   -------------------------------------------------------- */
-  dominio: "rodrigosouzafilho.adv.br",
+  dominio: "www.rodrigosouzafilho.adv.br",
 
   /* --------------------------------------------------------
      FRENTES ESPECÍFICAS — endereços completos, com https://.
