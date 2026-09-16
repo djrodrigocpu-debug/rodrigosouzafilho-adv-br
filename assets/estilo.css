@@ -67,7 +67,18 @@ a{color:inherit}
 .sobre-texto .lead{margin-top:18px}
 .rodape-sub{margin-top:26px}
 .rodape-oab{margin-top:8px}
-.foto-sobre{width:100%;height:auto;border-radius:14px;box-shadow:var(--sombra)}
+/* Retrato profissional emoldurado (seção Sobre): mesmo cartão da
+   identidade — superfície branca, borda névoa, sombra — servindo de
+   passe-partout, com legenda-placa em filete duplo de latão. */
+.foto-quadro{
+  background:var(--folha);border:1px solid var(--nevoa);border-radius:14px;
+  box-shadow:var(--sombra);padding:12px;max-width:420px;margin:0 auto;
+}
+.foto-quadro img{width:100%;height:auto;border-radius:9px;background:var(--nevoa)}
+.foto-legenda{padding:16px 6px 6px;text-align:center}
+.foto-fio{display:block;width:64px;height:5px;margin:0 auto 12px;border-top:1px solid var(--latao);border-bottom:1px solid var(--latao);opacity:.55}
+.foto-linha{display:block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pinheiro)}
+.foto-linha-area{margin-top:5px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:.95rem;letter-spacing:.02em;text-transform:none;color:var(--latao-escuro)}
 
 /* ---------- tipografia ---------- */
 h1,h2,.serif{font-family:var(--serif);color:var(--pinheiro);font-weight:500;line-height:1.15;letter-spacing:-.01em}
@@ -489,7 +500,7 @@ p.muted,.muted{color:var(--suave)}
   .hero-grid{grid-template-columns:1fr}
   .civil-grid,.sobre-grid,.contato-grid{grid-template-columns:1fr;gap:44px}
   .sobre-grid{grid-template-columns:1fr}
-  .ficha{max-width:420px}
+  .ficha,.foto-quadro{max-width:420px}
   .frentes{grid-template-columns:1fr}
   .principios{grid-template-columns:1fr;gap:30px}
   .rodape-grid{grid-template-columns:1fr 1fr}
