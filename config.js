@@ -17,15 +17,15 @@ window.CONFIG = {
      formEndpoint abaixo estiver vazio, o formulário passa a
      organizar a mensagem no WhatsApp do visitante.
   -------------------------------------------------------- */
-  whatsapp: "",
+  whatsapp: "5541988797835",
 
   /* Telefone COMO DEVE APARECER NA TELA (com DDD).
      Exemplo de formato: (41) 3333-0000                       */
-  telefoneExibicao: "",
+  telefoneExibicao: "(41) 98879-7835",
 
   /* E-mail de contato (aparece nos botões, no rodapé e na
      Política de Privacidade).                                */
-  email: "",
+  email: "contato@rodrigosouzafilho.adv.br",
 
   /* --------------------------------------------------------
      DOMÍNIO deste site — sem "https://" e sem barra no final.

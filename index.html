@@ -35,7 +35,7 @@
 <link rel="preload" href="assets/fontes/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fontes/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fontes/newsreader-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/estilo.css">
+<link rel="stylesheet" href="assets/estilo.css?v=5814ad3b">
 <script>(function(d){d.classList.add("js");setTimeout(function(){if(!window.__rsfOk)d.classList.remove("js")},1600)})(document.documentElement)</script>
 <script type="application/ld+json">
 {
@@ -44,6 +44,8 @@
   "name": "Rodrigo Souza Filho — Advocacia",
   "description": "Advocacia com atuação em Direito Civil: contratos e obrigações, responsabilidade civil, questões patrimoniais e imobiliárias, inventários e sucessões, relações de consumo e soluções judiciais e extrajudiciais.",
   "url": "https://rodrigosouzafilho.adv.br/",
+  "telephone": "+5541988797835",
+  "email": "contato@rodrigosouzafilho.adv.br",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Curitiba",
@@ -432,18 +434,61 @@
     <div class="contato-info reveal">
       <p class="eyebrow eyebrow--right">Canais de atendimento</p>
       <h2>Informações de contato</h2>
-      <p class="muted contato-abre">Para encaminhar informações iniciais, utilize os canais indicados abaixo.</p>
+      <p class="muted contato-abre">Para encaminhar informações iniciais ou consultar os canais de atendimento, utilize o WhatsApp, o e-mail ou o formulário ao lado.</p>
       <div class="contato-canais">
-        
-        
-        
-        
+        <a class="btn btn-primario" href="https://wa.me/5541988797835?text=Ol%C3%A1.%20Acessei%20o%20site%20de%20Rodrigo%20Souza%20Filho%20e%20gostaria%20de%20encaminhar%20informa%C3%A7%C3%B5es%20iniciais%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." data-zap target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.4ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.86 9.86 0 0 1-1.5-5.3C2.2 6.4 6.6 2 12 2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 7c0 5.5-4.4 9.9-9.8 9.9Zm5.4-7.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/></svg>WhatsApp</a>
+        <a class="btn btn-contorno" href="mailto:contato@rodrigosouzafilho.adv.br"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Enviar e-mail</a>
+        <p>Telefone: <a href="tel:+5541988797835">(41) 98879-7835</a></p>
+        <p>E-mail: <a href="mailto:contato@rodrigosouzafilho.adv.br">contato@rodrigosouzafilho.adv.br</a></p>
         <p class="muted">Atendimento com referência em Curitiba — Paraná.</p>
         <p class="selo-oab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Rodrigo Souza Filho · OAB/PR 95.516</p>
       </div>
     </div>
 
     
+    
+    <!-- Sem serviço de envio configurado: o formulário organiza a
+         mensagem e a abre no WhatsApp do visitante (mesma solução
+         dos sites especializados). Nada é armazenado neste site. -->
+    <form class="form reveal" id="formContato" data-modo="whatsapp" novalidate>
+      <p class="form-nota">Prefere escrever? Conte o essencial aqui: a mensagem é organizada e você mesmo a envia pelo WhatsApp. Este site não guarda o que você escreve.</p>
+      <div class="form-erro" id="formErro" role="alert" tabindex="-1"></div>
+      <label for="fNome">Nome
+        <input type="text" id="fNome" name="nome" autocomplete="name" maxlength="80" required>
+      </label>
+      <label for="fEmail">E-mail
+        <input type="email" id="fEmail" name="email" autocomplete="email" maxlength="120" required>
+      </label>
+      <label for="fTelefone">Telefone ou WhatsApp
+        <input type="tel" id="fTelefone" name="telefone" autocomplete="tel" maxlength="30" required>
+      </label>
+      <label for="fAssunto">Assunto
+        <select id="fAssunto" name="assunto" required>
+          <option value="">Selecione…</option>
+          <option value="Direito Civil">Direito Civil</option>
+          <option value="Contratos e obrigações">Contratos e obrigações</option>
+          <option value="Questões patrimoniais ou imobiliárias">Questões patrimoniais ou imobiliárias</option>
+          <option value="Inventário e sucessões">Inventário e sucessões</option>
+          <option value="Responsabilidade civil">Responsabilidade civil</option>
+          <option value="Direito à Saúde">Direito à Saúde</option>
+          <option value="Regularização de carro antigo">Regularização de carro antigo</option>
+          <option value="Outro assunto">Outro assunto</option>
+        </select>
+      </label>
+      <label for="fMensagem">Mensagem
+        <textarea id="fMensagem" name="mensagem" maxlength="1500" required placeholder="Descreva a situação em poucas linhas, sem incluir dados sensíveis desnecessários."></textarea>
+      </label>
+      <label class="campo-extra" for="fEmpresa" aria-hidden="true">Não preencha este campo
+        <input type="text" id="fEmpresa" name="empresa" tabindex="-1" autocomplete="off">
+      </label>
+      <label class="form-consent" for="fConsent">
+        <input type="checkbox" id="fConsent" name="consentimento" value="sim" required>
+        <span>Li e concordo com a <a href="/privacidade">Política de Privacidade</a> e autorizo o uso das informações acima para o retorno do contato.</span>
+      </label>
+      <button class="btn btn-primario" type="submit">Enviar informações iniciais</button>
+      <p class="form-aviso">O envio do formulário não estabelece automaticamente relação advogado-cliente e não representa promessa de contratação, resultado ou análise jurídica conclusiva.</p>
+      <noscript><p class="form-aviso">Com o JavaScript desativado, utilize o botão de WhatsApp ou o e-mail indicados ao lado.</p></noscript>
+    </form>
     
   </div>
 </section>
@@ -479,9 +524,9 @@
         <address>
           <span>Curitiba — Paraná</span>
           
-          
-          
-          
+          <a href="mailto:contato@rodrigosouzafilho.adv.br">contato@rodrigosouzafilho.adv.br</a>
+          <a href="https://wa.me/5541988797835?text=Ol%C3%A1.%20Acessei%20o%20site%20de%20Rodrigo%20Souza%20Filho%20e%20gostaria%20de%20encaminhar%20informa%C3%A7%C3%B5es%20iniciais%20sobre%20uma%20quest%C3%A3o%20jur%C3%ADdica." data-zap target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+5541988797835">(41) 98879-7835</a>
           
           
         </address>
@@ -495,6 +540,6 @@
 </footer>
 
 <script src="config.js"></script>
-<script src="assets/app.js?v=eb121e28" defer></script>
+<script src="assets/app.js?v=c3cfc2db" defer></script>
 </body>
 </html>
