@@ -1,4 +1,4 @@
-# Rodrigo Souza Filho — Advocacia (site institucional)
+# Rodrigo Augusto Wagner de Souza Filho — Advocacia (site institucional)
 
 Site institucional principal de **rodrigosouzafilho.adv.br**: Direito Civil como
 atuação principal e os dois sites já publicados — Direito à Saúde e
