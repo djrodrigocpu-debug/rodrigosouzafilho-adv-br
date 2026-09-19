@@ -20,16 +20,16 @@ Nada além disso. Sem `node`, sem `npm`, sem comando manual.
 
 ## Onde inserir cada dado (tudo em `config.js`)
 
-| O que | Campo em `config.js` | Formato | Situação na entrega |
+| O que | Campo em `config.js` | Formato | Situação hoje (18/09/2026) |
 |---|---|---|---|
-| WhatsApp | `whatsapp` | 55 + DDD + número, só dígitos (12 ou 13 no total) | **vazio — preencher** |
-| Telefone exibido | `telefoneExibicao` | como deve aparecer na tela, com DDD | **vazio — preencher (opcional)** |
-| E-mail | `email` | endereço completo | **vazio — preencher** |
-| Domínio deste site | `dominio` | sem `https://` e sem barra | preenchido: `rodrigosouzafilho.adv.br` |
+| WhatsApp | `whatsapp` | 55 + DDD + número, só dígitos (12 ou 13 no total) | preenchido: `5541988797835` |
+| Telefone exibido | `telefoneExibicao` | como deve aparecer na tela, com DDD | preenchido: `(41) 98879-7835` |
+| E-mail | `email` | endereço completo | preenchido: `contato@rodrigosouzafilho.adv.br` |
+| Domínio deste site | `dominio` | sem `https://` e sem barra | preenchido: `www.rodrigosouzafilho.adv.br` (com `www`, por decisão de canonical) |
 | Site de Direito à Saúde | `urlSaude` | endereço completo, com `https://` | preenchido |
 | Site de Carros Antigos | `urlCarros` | endereço completo, com `https://` | preenchido |
 | Serviço de envio do formulário | `formEndpoint` | endereço completo (ex.: Formspree) | **vazio — opcional** |
-| Número da OAB | `oab` | como deve aparecer (ex.: OAB/PR 00.000) | preenchido com o número usado nos dois sites atuais — **confirmar** |
+| Número da OAB | `oab` | como deve aparecer (ex.: OAB/PR 00.000) | preenchido: `OAB/PR 95.516`, confirmado e publicado no dado estruturado dos três sites |
 | Cidade / Estado / UF | `cidade`, `estado`, `uf` | texto | preenchidos (Curitiba / Paraná / PR) |
 | Endereço do escritório | `endereco` | texto livre | **vazio — opcional** |
 | LinkedIn / Instagram | `linkedin`, `instagram` | endereços completos | **vazios — opcionais** |
